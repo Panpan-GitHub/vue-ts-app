@@ -1,0 +1,29 @@
+{
+  "name": "vue-ts-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "gitHooks":{
+    "commit-msg":"lint-staged"
+  },
+  "lint-staged":{
+    "*.{js,ts}":[
+      "eslint --fix"
+    ]
+  },
+  "dependencies": {
+    "vue": "^3.2.37",
+    "yorkie": "^2.0.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^3.0.0",
+    "typescript": "^4.6.4",
+    "vite": "^3.0.0",
+    "vue-tsc": "^0.38.4"
+  }
+}
